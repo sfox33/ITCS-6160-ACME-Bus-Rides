@@ -1,6 +1,6 @@
 # ITCS-6160-Assemble-Bus
 Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and PHP.  Database was written with MySQL.
-1. ###Table of Contents
+###1. Table of Contents
 1. ###Summary of Project and Navigation
 1. ###Business Assumptions and Logic
 1. ###Databse Design
