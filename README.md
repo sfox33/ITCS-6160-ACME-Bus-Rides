@@ -32,7 +32,7 @@ END IF;
 END $$
 
 CREATE PROCEDURE calculatePrice(IN type VARCHAR(7), IN myDriverId int, IN numPassengers INT, IN miles INT, OUT price Decimal(10,2))
-BEGINew
+BEGIN
 
 DECLARE bus VARCHAR(25);
 SET bus = (SELECT busType FROM busdriver WHERE driverID = myDriverId);
