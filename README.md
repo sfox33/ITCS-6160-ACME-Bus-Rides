@@ -51,6 +51,11 @@ DELIMEITER ;
   ```
 #### Triggers
 #### Delete Statements
+  When using the web interface, a user has the option of backing out of any of the trips that they have signed up for.  This is accomplished by deleting their entry in the UserPerTrip table.  Note that this action does not delete the actualy trip, even when there are no users currently signed up.  The query itself if very straightforward:
+  ```
+  DELETE FROM userpertrip WHERE userId=:uId AND tripId = :tId;
+  ```
+  where ":uId" and ":tId" are variables determined by the user.
 #### Update Statements
 #### Indices
 #### Views
