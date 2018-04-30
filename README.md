@@ -144,7 +144,7 @@ DELIMITER ;
   ```
   where ":uId" and ":tId" are variables determined by the user.
 #### Update Statements
-  Like with the delete statment, the update statement occurs when a user joins an existing trip.  When this happends, the UserPerTrip tables is updated, and a trigger is activated updating the NumPassengers field within the Trip table.  See information on the update_trip_info_insert for the update query.
+  Like with the delete statment, the update statement occurs when a user joins an existing trip.  When this happends, the UserPerTrip tables is updated, and a trigger is activated updating the NumPassengers field within the Trip table.  See information on the update_trip_info_insert and update_trip_info_delete triggers for the update query.
 #### Indices
 #### Views
 ### Future Works and Goals
