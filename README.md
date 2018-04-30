@@ -4,6 +4,7 @@ Semester project for graduate-level database project.  Includes code for a web i
 ### Summary of Project and Navigation
 ### Business Assumptions and Logic
 ### Databse Design
+![Assemble Bus EER Diagram](ITCS 6160 Assemble Bus EERD.png)
 ### Advanced SQL Statements
   This project had several requirements regarding SQL commands that had to be used.  This section discusses how those requirements were
   specifically implemented.
