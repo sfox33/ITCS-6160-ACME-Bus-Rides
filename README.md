@@ -177,10 +177,12 @@ DELIMITER ;
   CREATE VIEW FutureTrips AS 
     SELECT Trip.tripId, Trip.originAddress, Trip.destAddress, Trip.beginDate, Trip.endDate 
     FROM Trip 
-    WHERE (Trip.beginDate > now());
+    WHERE (Trip.beginDate > NOW());
   ```
   * ##### SubscribedTrips
   
+  After the user logs in, they can view all of the trips they have joined.  To help this process, the SubscribedTrips view contains
+  all needed information from the Trip table associated with each user on that trip.
   ```
   CREATE VIEW SubscribedTrips AS 
     SELECT Trip.tripId, Trip.originAddress, Trip.destAddress, Trip.beginDate, Trip.endDate, UserPerTrip.userId
@@ -189,9 +191,12 @@ DELIMITER ;
   ```
   * ##### TripDriverInfo
   
+  When trying to see what drivers are available for a new trip, all of the drivers of a set bus type along with the dates they 
+  are away on trips are needed for comparison.  The TripDriverInfo view gathers all of the trip data plus the bus type of the 
+  associated driver for this comparison.
   ```
   CREATE VIEW TripDriverInfo AS 
-  SELECT Trip.tripId, Trip.miles, Trip.price, Trip.numPassengers, Trip.beginDate, Trip.endDate, Trip.originAddress, Trip.destAddress, Trip.TripType, BusDriver.driverID, BusDriver.busType 
+    SELECT Trip.tripId, Trip.miles, Trip.price, Trip.numPassengers, Trip.beginDate, Trip.endDate, Trip.originAddress, Trip.destAddress, Trip.TripType, BusDriver.driverID, BusDriver.busType 
     FROM BusDriver LEFT JOIN Trip 
     ON Trip.driverID = BusDriver.driverID;
   ```
