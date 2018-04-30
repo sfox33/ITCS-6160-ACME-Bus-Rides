@@ -51,7 +51,7 @@ DELIMEITER ;
   ```
 #### Triggers
   Throughout this project, I discovered that MySQL does not parse check constraints.  As a result, I used several triggers to help check the incoming data.  To a lesser extent, triggers were also used to update fields of incoming rows such as the price field.  More information of each trigger is written below.
-  * update_trip_info_insert
+  * ##### update_trip_info_insert
   
   This trigger updates the NumPassengers field of the associated trip after a user joins a trip in the UserPerTrip table.  In addition, it also uses the calculatePrice stored procedure to automatically update the price field of the same trip.
   ```
@@ -82,7 +82,7 @@ END IF;
 END |
 DELIMITER ;
 ```
-  * check_trip_insert
+  * ##### check_trip_insert
   ```
   DELIMITER |
 CREATE TRIGGER check_trip_insert
@@ -99,7 +99,7 @@ END IF;
 END |
 DELIMITER ;
 ```
-  * check_trip_update
+  * ##### check_trip_update
   ```
   DELIMITER |
 CREATE TRIGGER check_trip_update
@@ -112,7 +112,7 @@ END IF;
 END |
 DELIMITER ;
 ```
-  * check_bus_insert
+  * ##### check_bus_insert
   
   Both check_bus_insert and check_bus_update are triggers on the BusDriver tables.  They check to make sure that the BusType field is restricted to only allow entries in the set {'Motorcoach', 'Mini Bus', 'Executive Bus', 'School Bus', 'Limo Bus'}.  The code for the two triggers is below.
   ```
@@ -127,7 +127,7 @@ END IF;
 END |
 DELIMITER ;
 ```
-  * check_bus_update
+  * ##### check_bus_update
   ```
   DELIMITER |
 CREATE TRIGGER check_bus_update
@@ -147,7 +147,7 @@ DELIMITER ;
   ```
   where ":uId" and ":tId" are variables determined by the user.
 #### Update Statements
-  Like with the delete statment, the update statement occurs when a user joins an existing trip.  When this happends, the UserPerTrip tables is updated, and a trigger is activated updating the NumPassengers field within the Trip table.  See information on the update_trip_info_insert and update_trip_info_delete triggers for the update query.
+  Like with the delete statment, the update statement occurs when a user joins an existing trip.  When this happends, the UserPerTrip tables is updated, and a trigger is activated updating the NumPassengers field within the Trip table.  See information on the [update_trip_info_insert](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_insert) and [update_trip_info_delete](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_delete) triggers for the update query.
 #### Indices
 #### Views
 ### Future Works and Goals
