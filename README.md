@@ -56,7 +56,32 @@ DELIMEITER ;
   * check_trip_insert
   * check_trip_update
   * check_bus_insert
+  Both check_bus_insert and check_bus_update are triggers on the BusDriver tables.  They check to make sure that the BusType field is restricted to only allow entries in the set {'Motorcoach', 'Mini Bus', 'Executive Bus', 'School Bus', 'Limo Bus'}.  The code for the two triggers is below.
+  ```
+  DELIMITER |
+CREATE TRIGGER check_bus_insert
+before insert on BusDriver
+for each row
+BEGIN
+IF new.busType != 'Motorcoach' AND new.busType != 'Mini Bus' AND new.busType != 'Executive Bus' AND new.busType != 'School Bus' AND new.busType != 'Limo Bus' then
+signal sqlstate '45000';
+END IF;
+END |
+DELIMITER ;
+```
   * check_bus_update
+  ```
+  DELIMITER |
+CREATE TRIGGER check_bus_update
+before update on BusDriver
+for each row
+BEGIN
+IF new.busType != 'Motorcoach' AND new.busType != 'Mini Bus' AND new.busType != 'Executive Bus' AND new.busType != 'School Bus' AND new.busType != 'Limo Bus' then
+signal sqlstate '45000';
+END IF;
+END |
+DELIMITER ;
+  ```
 #### Delete Statements
   When using the web interface, a user has the option of backing out of any of the trips that they have signed up for.  This is accomplished by deleting their entry in the UserPerTrip table.  Note that this action does not delete the actualy trip, even when there are no users currently signed up.  The query itself if very straightforward:
   ```
