@@ -167,4 +167,32 @@ DELIMITER ;
   Like with the delete statment, the update statement occurs when a user joins an existing trip.  When this happends, the UserPerTrip tables is updated, and a trigger is activated updating the NumPassengers field within the Trip table.  See information on the [update_trip_info_insert](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_insert) and [update_trip_info_delete](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_delete) triggers for the update query.
 #### Indices
 #### Views
+  Three views were mainly used throughout this project.  They were used to simplfy the queries done for various tables and are discussed
+  in detail below.
+  * ##### FutureTrips
+  
+  When the user tries to join a trip, they are greeted with a table holding information on all trips that have not occurred yet.  
+  To make this query easier, the FutureTrips view was created to hold all of these viable trips.  The creation SQL code is below:
+  ```
+  CREATE VIEW FutureTrips AS 
+    SELECT Trip.tripId, Trip.originAddress, Trip.destAddress, Trip.beginDate, Trip.endDate 
+    FROM Trip 
+    WHERE (Trip.beginDate > now());
+  ```
+  * ##### SubscribedTrips
+  
+  ```
+  CREATE VIEW SubscribedTrips AS 
+    SELECT Trip.tripId, Trip.originAddress, Trip.destAddress, Trip.beginDate, Trip.endDate, UserPerTrip.userId
+    FROM Trip INNER JOIN UserPerTrip 
+    ON Trip.tripId = UserPerTrip.tripId;
+  ```
+  * ##### TripDriverInfo
+  
+  ```
+  CREATE VIEW TripDriverInfo AS 
+  SELECT Trip.tripId, Trip.miles, Trip.price, Trip.numPassengers, Trip.beginDate, Trip.endDate, Trip.originAddress, Trip.destAddress, Trip.TripType, BusDriver.driverID, BusDriver.busType 
+    FROM BusDriver LEFT JOIN Trip 
+    ON Trip.driverID = BusDriver.driverID;
+  ```
 ### Future Works and Goals
