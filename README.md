@@ -50,6 +50,13 @@ END $$
 DELIMEITER ;
   ```
 #### Triggers
+  Throughout this project, I discovered that MySQL does not parse check constraints.  As a result, I used several triggers to help check the incoming data.  To a lesser extent, triggers were also used to update fields of incoming rows such as the price field.  More information of each trigger is written below.
+  * update_trip_info_insert
+  * update_trip_info_delete
+  * check_trip_insert
+  * check_trip_update
+  * check_bus_insert
+  * check_bus_update
 #### Delete Statements
   When using the web interface, a user has the option of backing out of any of the trips that they have signed up for.  This is accomplished by deleting their entry in the UserPerTrip table.  Note that this action does not delete the actualy trip, even when there are no users currently signed up.  The query itself if very straightforward:
   ```
