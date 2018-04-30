@@ -164,7 +164,11 @@ DELIMITER ;
   ```
   where ":uId" and ":tId" are variables determined by the user.
 #### Update Statements
-  Like with the delete statment, the update statement occurs when a user joins an existing trip.  When this happends, the UserPerTrip tables is updated, and a trigger is activated updating the NumPassengers field within the Trip table.  See information on the [update_trip_info_insert](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_insert) and [update_trip_info_delete](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_delete) triggers for the update query.
+  Like with the delete statment, the update statement occurs when a user joins an existing trip.  When this happends, the UserPerTrip
+  tables is updated, and a trigger is activated updating the NumPassengers field within the Trip table.  See information on the
+  [update_trip_info_insert](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_insert) and 
+  [update_trip_info_delete](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_delete) triggers for 
+  the update query.
 #### Indices
 #### Views
   Three views were mainly used throughout this project.  They were used to simplfy the queries done for various tables and are discussed
@@ -192,8 +196,8 @@ DELIMITER ;
   * ##### TripDriverInfo
   
   When trying to see what drivers are available for a new trip, all of the drivers of a set bus type along with the dates they 
-  are away on trips are needed for comparison.  The TripDriverInfo view gathers all of the trip data plus the bus type of the 
-  associated driver for this comparison.
+  are away on trips are needed for comparison.  The TripDriverInfo view gathers all of the bus drivers and the trip data each 
+  driver is assigned to for this comparison.
   ```
   CREATE VIEW TripDriverInfo AS 
     SELECT Trip.tripId, Trip.miles, Trip.price, Trip.numPassengers, Trip.beginDate, Trip.endDate, Trip.originAddress, Trip.destAddress, Trip.TripType, BusDriver.driverID, BusDriver.busType 
