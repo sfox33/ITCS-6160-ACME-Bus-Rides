@@ -1,11 +1,11 @@
 # ITCS-6160-Assemble-Bus
 Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and PHP.  Database was written with MySQL.
 ### Table of Contents
-1. [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#Summary-of-Project-and-Navigation)
-1. [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#Businees-Assumptions-and-Logic)
-1. [Database Design](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#Database-Design)
-1. [Advanced SQL Statements](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#Advanced-SQL-Statements)
-1. [Future Works and Goals](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#Future-Works-and-Goals)
+1. [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#summary-of-project-and-navigation)
+1. [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#businees-assumptions-and-logic)
+1. [Database Design](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#databse-design)
+1. [Advanced SQL Statements](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#advanced-sql-statements)
+1. [Future Works and Goals](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#future-works-and-goals)
 ### Summary of Project and Navigation
 ### Business Assumptions and Logic
 ### Databse Design
