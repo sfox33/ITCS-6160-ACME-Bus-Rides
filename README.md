@@ -65,7 +65,7 @@ call calculatePrice(new.tripId);
 END |
 DELIMITER ;
 ```
-  * update_trip_info_delete
+  * ##### update_trip_info_delete
   
   This trigger updates the NumPassengers field of the associated trip after a user quits a trip from the UserPerTrip table.  In addition, it also uses the calculatePrice stored procedure to automatically update the price field of the same trip.
   ```
