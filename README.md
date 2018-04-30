@@ -52,6 +52,7 @@ DELIMEITER ;
 #### Triggers
   Throughout this project, I discovered that MySQL does not parse check constraints.  As a result, I used several triggers to help check the incoming data.  To a lesser extent, triggers were also used to update fields of incoming rows such as the price field.  More information of each trigger is written below.
   * update_trip_info_insert
+  This trigger updates the NumPassengers field of the associated trip after a user joins a trip in the UserPerTrip table.  In addition, it also uses the calculatePrice stored procedure to automatically update the price field of the same trip.
   ```
   DELIMITER |
 CREATE TRIGGER update_trip_info_insert
@@ -64,6 +65,7 @@ END |
 DELIMITER ;
 ```
   * update_trip_info_delete
+  This trigger updates the NumPassengers field of the associated trip after a user quits a trip from the UserPerTrip table.  In addition, it also uses the calculatePrice stored procedure to automatically update the price field of the same trip.
   ```
   DELIMITER |
 CREATE TRIGGER update_trip_info_delete
