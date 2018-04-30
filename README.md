@@ -1,4 +1,4 @@
-# ITCS-6160-Assemble-Bus
+# ITCS-6160-ACME-Bus-Rides
 ### Table of Contents
 - [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#summary-of-project-and-navigation)
 - [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#business-assumptions-and-logic)
