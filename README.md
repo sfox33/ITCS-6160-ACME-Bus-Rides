@@ -52,9 +52,62 @@ DELIMEITER ;
 #### Triggers
   Throughout this project, I discovered that MySQL does not parse check constraints.  As a result, I used several triggers to help check the incoming data.  To a lesser extent, triggers were also used to update fields of incoming rows such as the price field.  More information of each trigger is written below.
   * update_trip_info_insert
+  ```
+  DELIMITER |
+CREATE TRIGGER update_trip_info_insert
+after insert on UserPerTrip
+for each row
+BEGIN
+update trip set trip.numPassengers = trip.numPassengers + 1 where trip.tripId = new.tripId;
+call calculatePrice(new.tripId);
+END |
+DELIMITER ;
+```
   * update_trip_info_delete
+  ```
+  DELIMITER |
+CREATE TRIGGER update_trip_info_delete
+after delete on UserPerTrip
+for each row
+BEGIN
+update trip set trip.numPassengers = trip.numPassengers - 1 where trip.tripId = old.tripId;
+if (select numPassengers from trip where tripId = old.tripId) > 0 then
+call calculatePrice(old.tripId);
+else update trip set price = 0 where tripId = old.tripId;
+END IF;
+END |
+DELIMITER ;
+```
   * check_trip_insert
+  ```
+  DELIMITER |
+CREATE TRIGGER check_trip_insert
+before insert on Trip
+for each row
+BEGIN
+IF (new.beginDate > new.endDate) or (new.TripType != 'round' AND new.TripType != 'one-way') then 
+signal sqlstate '45000';
+END IF;
+IF new.price is null then
+call getPrice(new.TripType, new.driverId, new.numPassengers, new.miles, @price);
+set new.price = (select @price);
+END IF;
+END |
+DELIMITER ;
+```
   * check_trip_update
+  ```
+  DELIMITER |
+CREATE TRIGGER check_trip_update
+before update on Trip
+for each row
+BEGIN
+IF (new.beginDate > new.endDate) OR (new.TripType != 'round' AND new.TripType != 'one-way') then 
+signal sqlstate '45000';
+END IF;
+END |
+DELIMITER ;
+```
   * check_bus_insert
   Both check_bus_insert and check_bus_update are triggers on the BusDriver tables.  They check to make sure that the BusType field is restricted to only allow entries in the set {'Motorcoach', 'Mini Bus', 'Executive Bus', 'School Bus', 'Limo Bus'}.  The code for the two triggers is below.
   ```
