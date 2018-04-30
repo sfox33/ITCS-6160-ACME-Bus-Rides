@@ -1,5 +1,4 @@
 # ITCS-6160-Assemble-Bus
-Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and PHP.  Database was written with MySQL.
 ### Table of Contents
 - [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#summary-of-project-and-navigation)
 - [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#business-assumptions-and-logic)
@@ -13,6 +12,8 @@ Semester project for graduate-level database project.  Includes code for a web i
   - [Views](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#views)
 - [Future Works and Goals](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#future-works-and-goals)
 ### Summary of Project and Navigation
+  Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and 
+  PHP.  Database was written with MySQL.
 ### Business Assumptions and Logic
 ### Databse Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/ITCS%206160%20Assemble%20Bus%20EERD.PNG)
