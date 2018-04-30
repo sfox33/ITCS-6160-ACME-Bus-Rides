@@ -88,6 +88,12 @@ END |
 DELIMITER ;
 ```
   * ##### check_trip_insert
+  
+  When a new trip is stored in the Trip table, three things need to be done.  1) the two date fields needs to be compared so that
+  beginDate occures before endDate.  2) The TripType field needs to be constrained to be from the set {"round", "one-way"}.  
+  3) The price needs to be updated.  If either of the first two check fail, a sqlstate '45000' error is thrown so that the insert 
+  query is cancelled.  For the third part, the getPrice stored procedure is called to get the price so is can be set within the
+  new row.
   ```
   DELIMITER |
 CREATE TRIGGER check_trip_insert
@@ -105,6 +111,9 @@ END |
 DELIMITER ;
 ```
   * ##### check_trip_update
+  
+  This trigger accomplished the same things as the check_trip_insert trigger except that it occurs on an update to the trip table 
+  rather than an insert.
   ```
   DELIMITER |
 CREATE TRIGGER check_trip_update
