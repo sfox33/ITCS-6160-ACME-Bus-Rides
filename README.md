@@ -10,7 +10,7 @@
   - [Update Statements](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update-statements)
   - [Indices](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#indices)
   - [Views](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#views)
-- [Future Works and Goals](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#future-works-and-goals)
+- [Future Work and Goals](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#future-works-and-goals)
 ## Summary of Project and Navigation
   Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and 
   PHP.  Database was written with MySQL.
