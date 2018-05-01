@@ -22,11 +22,19 @@
   Views section for information on the prurpose and construction of each view.  Descriptions of the tables are below.
   - Trip
   
-  This tables holds the relevant information on each trip including the origin and destination addresses, DateTime objects 
+  This table holds the relevant information on each trip including the origin and destination addresses, DateTime objects 
   representing when the trip starts and ends, if the trip is a one-way trip or round trip, etc.
   - Person
+  
+  This table holds information about each person represented in the database - including the first and last name, the email, and 
+  the automatically generated user ID of the person.
   - Client
-  - BusDrive
+  
+  The Client table is a specialization of the Person table representating the customers who are using this service.
+  - BusDriver
+  
+  The BusDriver table is a specialization of the Person table representing the people who drive buses for this service.  It 
+  also includes the type of bus the person drives.
   - RallyPoint
   - Address
   - Login
