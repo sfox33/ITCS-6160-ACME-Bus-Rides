@@ -1,17 +1,17 @@
 # ITCS-6160-ACME-Bus-Rides
 ## Table of Contents
-- [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#summary-of-project-and-navigation)
-- [User Interface](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#user-interface)
-- [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#business-assumptions-and-logic)
-- [Database Design](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#databse-design)
-- [Advanced SQL Statements](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#advanced-sql-statements)
-  - [Stored Procedures](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#stored-procedures)
-  - [Triggers](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#triggers)
-  - [Delete Statements](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#delete-statements)
-  - [Update Statements](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update-statements)
-  - [Indices](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#indices)
-  - [Views](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#views)
-- [Future Work and Goals](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#future-works-and-goals)
+- [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#summary-of-project-and-navigation)
+- [User Interface](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#user-interface)
+- [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#business-assumptions-and-logic)
+- [Database Design](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#databse-design)
+- [Advanced SQL Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#advanced-sql-statements)
+  - [Stored Procedures](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#stored-procedures)
+  - [Triggers](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#triggers)
+  - [Delete Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#delete-statements)
+  - [Update Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#update-statements)
+  - [Indices](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#indices)
+  - [Views](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#views)
+- [Future Work and Goals](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#future-works-and-goals)
 ## Summary of Project and Navigation
   Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and 
   PHP.  Database was written with MySQL.
