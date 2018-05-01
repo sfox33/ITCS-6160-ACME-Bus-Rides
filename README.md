@@ -91,7 +91,7 @@ END IF;
 
 END $$
 
-CREATE PROCEDURE calculatePrice(IN type VARCHAR(7), IN myDriverId int, IN numPassengers INT, IN miles INT, OUT price Decimal(10,2))
+CREATE PROCEDURE GetPrice(IN type VARCHAR(7), IN myDriverId int, IN numPassengers INT, IN miles INT, OUT price Decimal(10,2))
 BEGIN
 
 DECLARE bus VARCHAR(25);
@@ -107,7 +107,7 @@ IF type = 'round' then set price = price*2;
 END IF;
 
 END $$
-DELIMEITER ;
+DELIMITER ;
   ```
 ### Triggers
   Throughout this project, I discovered that MySQL does not parse check constraints.  As a result, I used several triggers to help check the incoming data.  To a lesser extent, triggers were also used to update fields of incoming rows such as the price field.  More information of each trigger is written below.
