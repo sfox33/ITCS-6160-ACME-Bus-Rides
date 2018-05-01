@@ -15,7 +15,7 @@
   Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and 
   PHP.  Database was written with MySQL.
   
-  Team: ![Little Bobby Tables](https://xkcd.com/327/)
+  Team: [Little Bobby Tables](https://xkcd.com/327/)
   
   Members: Sean Fox
 ## Business Assumptions and Logic
