@@ -21,6 +21,9 @@
   Above is the EER Diagram for my database.  It has 9 tables, and 3 views that are primarily used throughout the project.  See the 
   Views section for information on the prurpose and construction of each view.  Descriptions of the tables are below.
   - Trip
+  
+  This tables holds the relevant information on each trip including the origin and destination addresses, DateTime objects 
+  representing when the trip starts and ends, if the trip is a one-way trip or round trip, etc.
   - Person
   - Client
   - BusDrive
@@ -28,7 +31,7 @@
   - Address
   - Login
   - UserPerTrip
-  - RallyPointPerTrip
+  - RallyPointsPerTrip
 ## Advanced SQL Statements
   This project had several requirements regarding SQL commands that had to be used.  This section discusses how those requirements were
   specifically implemented.
