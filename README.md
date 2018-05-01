@@ -1,17 +1,17 @@
 # ITCS-6160-ACME-Bus-Rides
 ## Table of Contents
-- [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#summary-of-project-and-navigation)
-- [User Interface](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#user-interface)
-- [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#business-assumptions-and-logic)
-- [Database Design](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#databse-design)
-- [Advanced SQL Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#advanced-sql-statements)
-  - [Stored Procedures](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#stored-procedures)
-  - [Triggers](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#triggers)
-  - [Delete Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#delete-statements)
-  - [Update Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#update-statements)
-  - [Indices](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#indices)
-  - [Views](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#views)
-- [Future Work and Goals](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#future-works-and-goals)
+- [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#summary-of-project-and-navigation)
+- [User Interface](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#user-interface)
+- [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#business-assumptions-and-logic)
+- [Database Design](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#databse-design)
+- [Advanced SQL Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#advanced-sql-statements)
+  - [Stored Procedures](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#stored-procedures)
+  - [Triggers](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#triggers)
+  - [Delete Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#delete-statements)
+  - [Update Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#update-statements)
+  - [Indices](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#indices)
+  - [Views](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#views)
+- [Future Work and Goals](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#future-works-and-goals)
 ## Summary of Project and Navigation
   This was the semester project for the graduate-level course ITCS 6160 from UNCC.  The project involved making a database in MySQL 
   with at least 8 tables while showcasing several facets of database design including triggers and stored procedures.  Additionally,
