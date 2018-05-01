@@ -1,5 +1,5 @@
 # ITCS-6160-ACME-Bus-Rides
-### Table of Contents
+## Table of Contents
 - [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#summary-of-project-and-navigation)
 - [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#business-assumptions-and-logic)
 - [Database Design](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#databse-design)
@@ -11,16 +11,16 @@
   - [Indices](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#indices)
   - [Views](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#views)
 - [Future Works and Goals](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#future-works-and-goals)
-### Summary of Project and Navigation
+## Summary of Project and Navigation
   Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and 
   PHP.  Database was written with MySQL.
-### Business Assumptions and Logic
-### Databse Design
+## Business Assumptions and Logic
+## Databse Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/ITCS%206160%20Assemble%20Bus%20EERD.PNG)
-### Advanced SQL Statements
+## Advanced SQL Statements
   This project had several requirements regarding SQL commands that had to be used.  This section discusses how those requirements were
   specifically implemented.
-#### Stored Procedures
+### Stored Procedures
   This project made use of two different stored procedures that accomplished the same goal: retrieving or updating the price of a trip.
   They are named GetPrice and calculatePrice respectively.  Initially, they were both meant to be called within a trigger to update the
   price when a user was added to a trip or a trip was created.  However, I discovered that MySQL does not allow after-insert triggers to
@@ -67,9 +67,9 @@ END IF;
 END $$
 DELIMEITER ;
   ```
-#### Triggers
+### Triggers
   Throughout this project, I discovered that MySQL does not parse check constraints.  As a result, I used several triggers to help check the incoming data.  To a lesser extent, triggers were also used to update fields of incoming rows such as the price field.  More information of each trigger is written below.
-  * ##### update_trip_info_insert
+  * #### update_trip_info_insert
   
   This trigger updates the NumPassengers field of the associated trip after a user joins a trip in the UserPerTrip table.  In addition, it also uses the calculatePrice stored procedure to automatically update the price field of the same trip.
   ```
@@ -83,7 +83,7 @@ call calculatePrice(new.tripId);
 END |
 DELIMITER ;
 ```
-  * ##### update_trip_info_delete
+  * #### update_trip_info_delete
   
   This trigger updates the NumPassengers field of the associated trip after a user quits a trip from the UserPerTrip table.  In addition, it also uses the calculatePrice stored procedure to automatically update the price field of the same trip.
   ```
@@ -100,7 +100,7 @@ END IF;
 END |
 DELIMITER ;
 ```
-  * ##### check_trip_insert
+  * #### check_trip_insert
   
   When a new trip is stored in the Trip table, three things need to be done.  
   
@@ -126,7 +126,7 @@ END IF;
 END |
 DELIMITER ;
 ```
-  * ##### check_trip_update
+  * #### check_trip_update
   
   This trigger accomplished the same things as the check_trip_insert trigger except that it occurs on an update to the trip table 
   rather than an insert.
@@ -142,7 +142,7 @@ END IF;
 END |
 DELIMITER ;
 ```
-  * ##### check_bus_insert
+  * #### check_bus_insert
   
   Both check_bus_insert and check_bus_update are triggers on the BusDriver tables.  They check to make sure that the BusType field is restricted to only allow entries in the set {'Motorcoach', 'Mini Bus', 'Executive Bus', 'School Bus', 'Limo Bus'}.  The code for the two triggers is below.
   ```
@@ -157,7 +157,7 @@ END IF;
 END |
 DELIMITER ;
 ```
-  * ##### check_bus_update
+  * #### check_bus_update
   ```
   DELIMITER |
 CREATE TRIGGER check_bus_update
@@ -170,20 +170,20 @@ END IF;
 END |
 DELIMITER ;
   ```
-#### Delete Statements
+### Delete Statements
   When using the web interface, a user has the option of backing out of any of the trips that they have signed up for.  This is accomplished by deleting their entry in the UserPerTrip table.  Note that this action does not delete the actualy trip, even when there are no users currently signed up.  The query itself if very straightforward:
   ```
   DELETE FROM userpertrip WHERE userId=:uId AND tripId = :tId;
   ```
   where ":uId" and ":tId" are variables determined by the user.
-#### Update Statements
+### Update Statements
   Like with the delete statment, the update statement occurs when a user joins an existing trip.  When this happends, the UserPerTrip
   tables is updated, and a trigger is activated updating the NumPassengers field within the Trip table.  See information on the
   [update_trip_info_insert](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_insert) and 
   [update_trip_info_delete](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_delete) triggers for 
   the update query.
-#### Indices
-#### Views
+### Indices
+### Views
   Three views were mainly used throughout this project.  They were used to simplfy the queries done for various tables and are discussed
   in detail below.
   * ##### FutureTrips
@@ -196,7 +196,7 @@ DELIMITER ;
     FROM Trip 
     WHERE (Trip.beginDate > NOW());
   ```
-  * ##### SubscribedTrips
+  * #### SubscribedTrips
   
   After the user logs in, they can view all of the trips they have joined.  To help this process, the SubscribedTrips view contains
   all needed information from the Trip table associated with each user on that trip.
@@ -206,7 +206,7 @@ DELIMITER ;
     FROM Trip INNER JOIN UserPerTrip 
     ON Trip.tripId = UserPerTrip.tripId;
   ```
-  * ##### TripDriverInfo
+  * #### TripDriverInfo
   
   When trying to see what drivers are available for a new trip, all of the drivers of a set bus type along with the dates they 
   are away on trips are needed for comparison.  The TripDriverInfo view gathers all of the bus drivers and the trip data each 
@@ -217,4 +217,4 @@ DELIMITER ;
     FROM BusDriver LEFT JOIN Trip 
     ON Trip.driverID = BusDriver.driverID;
   ```
-### Future Works and Goals
+## Future Works and Goals
