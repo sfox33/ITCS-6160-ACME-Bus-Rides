@@ -39,8 +39,13 @@
   
   The BusDriver table is a specialization of the Person table representing the people who drive buses for this service.  It 
   also includes the type of bus the person drives.
-  - RallyPoint
   - Address
+  
+  A table containing the address information of all of the locations used within the database including the origin or the trips, 
+  the destinations of the trips, and the Rally Points of the trip.
+  - RallyPoint
+  
+  A specialization of the Address table which contains the Ids of the addresses that server as Rally Points
   - Login
   - UserPerTrip
   - RallyPointsPerTrip
