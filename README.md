@@ -14,6 +14,8 @@
 ## Summary of Project and Navigation
   Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and 
   PHP.  Database was written with MySQL.
+  Team: ![Little Bobby Tables](https://xkcd.com/327/)
+  Members: Sean Fox
 ## Business Assumptions and Logic
 ## Databse Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/ITCS%206160%20Assemble%20Bus%20EERD.PNG)
