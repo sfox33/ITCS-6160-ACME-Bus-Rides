@@ -13,12 +13,18 @@
   - [Views](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#views)
 - [Future Work and Goals](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/README.md#future-works-and-goals)
 ## Summary of Project and Navigation
-  Semester project for graduate-level database project.  Includes code for a web interface written with HTML, CSS, JavaScript, and 
-  PHP.  Database was written with MySQL.
+  This was the semester project for the graduate-level course ITCS 6160 from UNCC.  The project involved making a database in MySQL 
+  with at least 8 tables while showcasing several facets of database design including triggers and stored procedures.  Additionally,
+  using HTML, CSS, JavaScript, and PHP, I have to design a web-based user interface that allowed a user to interact with the database 
+  in various ways.
   
   Team: [Little Bobby Tables](https://xkcd.com/327/)
   
   Members: Sean Fox
+  
+  Within this repository, you can find all of my code needed to recreate my project, or just review what was done.  This README file
+  will go over the project, but should you wish to investigate, there are three folders to be aware of within ITCS-6160-ACME-Bus-Rides. 
+  The pictures directory simply contains pictures referenced within this document and can be ignored.
 ## User Interface
 ## Business Assumptions and Logic
 ## Databse Design
