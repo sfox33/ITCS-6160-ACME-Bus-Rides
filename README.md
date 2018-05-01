@@ -16,6 +16,7 @@
   PHP.  Database was written with MySQL.
   
   Team: ![Little Bobby Tables](https://xkcd.com/327/)
+  
   Members: Sean Fox
 ## Business Assumptions and Logic
 ## Databse Design
