@@ -17,6 +17,8 @@
 ## Business Assumptions and Logic
 ## Databse Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/ITCS%206160%20Assemble%20Bus%20EERD.PNG)
+
+Above is the EER Diagram for my database.  It has 11 tables, and 3 views that are primarily used throughout the project.
 ## Advanced SQL Statements
   This project had several requirements regarding SQL commands that had to be used.  This section discusses how those requirements were
   specifically implemented.
