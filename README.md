@@ -25,6 +25,14 @@
   Within this repository, you can find all of my code needed to recreate my project, or just review what was done.  This README file
   will go over the project, but should you wish to investigate, there are three folders to be aware of within ITCS-6160-ACME-Bus-Rides. 
   The pictures directory simply contains pictures referenced within this document and can be ignored.
+  
+  The Database Dump directory contains a single .sql dump file.  This dump file contains all of the code needed to recreate the 
+  database - including data, triggers, and stored procedures.
+  
+  The ACME Bus Rides directory contains all of the code for the user interface.  It leads to three sub directories: model, util, and
+  view.  The model directory contains files used solely to access the database and validate information.  The util directory simply
+  contains files used to set up information for PHP (such as obtaining the URL).  Finally, the view directory contains all the code 
+  to create the web interface itself.
 ## User Interface
 ## Business Assumptions and Logic
 ## Databse Design
