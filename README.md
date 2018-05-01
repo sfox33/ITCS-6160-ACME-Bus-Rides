@@ -249,4 +249,4 @@ DELIMITER ;
     FROM BusDriver LEFT JOIN Trip 
     ON Trip.driverID = BusDriver.driverID;
   ```
-## Future Works and Goals
+## Future Work and Goals
