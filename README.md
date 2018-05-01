@@ -47,8 +47,16 @@
   
   A specialization of the Address table which contains the Ids of the addresses that server as Rally Points
   - Login
+  
+  A table that holds the information for logging into a user account.  Contains the Ids from the client table along with the username
+  of the client.  For any new accounts, PHP code on the server ensures that the password is hashed along with salt before it is put 
+  into the database.
   - UserPerTrip
+  
+  A middle table between Client and Trip.  It lists the trip Ids along with the Ids of each client that has signed up for the trip.
   - RallyPointsPerTrip
+  
+  A middle table between RallyPoint and Trip.  Lists the trip Ids along with the Ids of each rally point taken on the trip.
 ## Advanced SQL Statements
   This project had several requirements regarding SQL commands that had to be used.  This section discusses how those requirements were
   specifically implemented.
