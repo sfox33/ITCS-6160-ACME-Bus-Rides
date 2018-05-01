@@ -1,6 +1,7 @@
 # ITCS-6160-ACME-Bus-Rides
 ## Table of Contents
 - [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#summary-of-project-and-navigation)
+- [User Interface](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#user-interface)
 - [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#business-assumptions-and-logic)
 - [Database Design](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#databse-design)
 - [Advanced SQL Statements](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#advanced-sql-statements)
@@ -18,6 +19,7 @@
   Team: [Little Bobby Tables](https://xkcd.com/327/)
   
   Members: Sean Fox
+## User Interface
 ## Business Assumptions and Logic
 ## Databse Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/ITCS%206160%20Assemble%20Bus%20EERD.PNG)
