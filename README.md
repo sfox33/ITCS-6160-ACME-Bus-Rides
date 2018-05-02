@@ -51,7 +51,9 @@
   - Database Language: MySql
   
   To bring all of these pieces together, XAMPP was used to run Apache and MySQL so that the web interface could be tested on a local
-  host.
+  host.  To formally recreate this project, after installing XAMPP, download and place the ACME Bus Rides directory within the htdocs
+  folder created by XAMPP.  Once that is done, the .sql dump file can be imported through phpmyadmin and the localhost.  Once the 
+  import has been successfully completed, you should be able to pull up localhost/acmebusride/index.php to try out the interface.
 ## Business Assumptions and Logic
   Since the focus on this project was on the database usage more than functionality, several liberties and assumptions were taken 
   with the design of this project which will be listed here.  First, it is assumed that the user will create a trip with a proper
@@ -65,6 +67,7 @@
   type chosen for the trip) and dividing by the number of passengers on the trip.  This price is updated as the number of passengers 
   changes.
 ## User Interface
+  To get an idea of what the interface looks like without installing XAMPP, pictures and descriptions of the interface are below.
 ![LogIn View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/LogInViewCapture.PNG)
 ![Sign Up View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/SignUpViewCapture.PNG)
 ![Home View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/HomeViewCapture.PNG)
