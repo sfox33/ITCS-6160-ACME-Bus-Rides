@@ -1,0 +1,14 @@
+﻿TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,VERSION,ROW_FORMAT,TABLE_ROWS,AVG_ROW_LENGTH,DATA_LENGTH,MAX_DATA_LENGTH,INDEX_LENGTH,DATA_FREE,AUTO_INCREMENT,CREATE_TIME,UPDATE_TIME,CHECK_TIME,TABLE_COLLATION,CHECKSUM,CREATE_OPTIONS,TABLE_COMMENT
+def,assemblebus,address,BASE TABLE,InnoDB,10,Dynamic,400,122,49152,0,0,0,401,4/28/2018 17:23,,,utf8_general_ci,,,
+def,assemblebus,busdriver,BASE TABLE,InnoDB,10,Dynamic,45,364,16384,0,0,0,,4/5/2018 6:06,,,utf8_general_ci,,,
+def,assemblebus,client,BASE TABLE,InnoDB,10,Dynamic,140,117,16384,0,0,0,,4/5/2018 6:01,,,utf8_general_ci,,,
+def,assemblebus,futuretrips,VIEW,,,,,,,,,,,,,,,,,VIEW
+def,assemblebus,login,BASE TABLE,InnoDB,10,Dynamic,150,109,16384,0,16384,0,,4/29/2018 15:21,,,utf8_general_ci,,,
+def,assemblebus,person,BASE TABLE,InnoDB,10,Dynamic,200,81,16384,0,0,0,201,4/8/2018 19:27,,,utf8_general_ci,,,
+def,assemblebus,rallypoint,BASE TABLE,InnoDB,10,Dynamic,152,107,16384,0,0,0,399,4/8/2018 19:58,,,utf8_general_ci,,,
+def,assemblebus,rallypointinfo,VIEW,,,,,,,,,,,,,,,,,VIEW
+def,assemblebus,rallypointspertrip,BASE TABLE,InnoDB,10,Dynamic,548,29,16384,0,16384,0,,4/5/2018 6:08,,,utf8_general_ci,,,
+def,assemblebus,subscribedtrips,VIEW,,,,,,,,,,,,,,,,,VIEW
+def,assemblebus,trip,BASE TABLE,InnoDB,10,Dynamic,141,116,16384,0,49152,0,301,4/29/2018 13:52,,,utf8_general_ci,,,
+def,assemblebus,tripdriverinfo,VIEW,,,,,,,,,,,,,,,,,VIEW
+def,assemblebus,userpertrip,BASE TABLE,InnoDB,10,Dynamic,553,29,16384,0,16384,0,,4/29/2018 13:58,,,utf8_general_ci,,,
