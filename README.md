@@ -257,6 +257,15 @@ DELIMITER ;
   [update_trip_info_delete](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/README.md#update_trip_info_delete) triggers for 
   the update query.
 ### Indices
+
+  For creating the views, two indices were created on the Trip.driverId and UserPerTrip.tripId columns to help with TripDriverInfo 
+  and SubscribedTrips respectively.  I also put one on the Trip.beginDate to help with the FutureTrips view, but after testing 
+  the view query with the EXPLAIN statement, I discovered that the index was not providing any optimization, and I chose to drop it. 
+  The code for the two indices are below.
+  ```
+  CREATE INDEX UserTrip_index on UserPerTrip(tripId);
+  CREATE INDEX driver_index on Trip(driverId);
+  ```
 ### Views
   Three views were mainly used throughout this project.  They were used to simplfy the queries done for various tables and are discussed
   in detail below.
