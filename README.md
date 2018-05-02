@@ -1,8 +1,8 @@
 # ITCS-6160-ACME-Bus-Rides
 ## Table of Contents
 - [Summary of Project and Navigation](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#summary-of-project-and-navigation)
-- [User Interface](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#user-interface)
 - [Bussiness Assumptions and Logic](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#business-assumptions-and-logic)
+- [User Interface](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#user-interface)
 - [Database Design](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#databse-design)
 - [Advanced SQL Statements](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#advanced-sql-statements)
   - [Stored Procedures](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#stored-procedures)
@@ -52,6 +52,18 @@
   
   To bring all of these pieces together, XAMPP was used to run Apache and MySQL so that the web interface could be tested on a local
   host.
+## Business Assumptions and Logic
+  Since the focus on this project was on the database usage more than functionality, several liberties and assumptions were taken 
+  with the design of this project which will be listed here.  First, it is assumed that the user will create a trip with a proper
+  address (Street name, City, State, and Country).  With this structure, there is also the heavy assumption that the address will be
+  American, but it really just have to follow the previous criteria.  Furthermore, while scheduling the trip, the end date and time 
+  must occur after the begin date and time of the trip, however, when those dates are chosen relative to the current date and time 
+  does not matter.  However, a user will only be able to join a trip whose begin time occurs after the current time.
+  
+  Pricing is estimate by the number of miles (which is obtained from Goolge Maps API) from the origin to the destination.  Rally points 
+  do not affect the price.  The price chosen by multiplying the number of miles by a small float (which changes depending on the bus 
+  type chosen for the trip) and dividing by the number of passengers on the trip.  This price is updated as the number of passengers 
+  changes.
 ## User Interface
 ![LogIn View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/LogInViewCapture.PNG)
 ![Sign Up View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/SignUpViewCapture.PNG)
@@ -60,7 +72,6 @@
 ![Trip1 View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/CreateViewPt1Capture.PNG)
 ![Trip2 View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/CreateViewPt2Capture.PNG)
 ![Join View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/JoinViewCapture.PNG)
-## Business Assumptions and Logic
 ## Databse Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/ITCS%206160%20ACME%20Bus%20Rides%20EERD.PNG)
 
