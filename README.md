@@ -118,7 +118,7 @@
   created.  If the user wishes to joing one, they can select the radio button in the Join column for the respective trip and select the 
   "Join Trip" button on the bottom.  The page will then refresh with all remaining trips as it does not display trips the user is 
   already signed up for.
-## Databse Design
+## Database Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/ITCS%206160%20ACME%20Bus%20Rides%20EERD.PNG)
 
   Above is the EER Diagram for my database.  It has 9 tables, and 3 views that are primarily used throughout the project.  See the 
