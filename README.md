@@ -68,8 +68,16 @@
   changes.
 ## User Interface
   To get an idea of what the interface looks like without installing XAMPP, pictures and descriptions of the interface are below.
+  ### Login Page
 ![LogIn View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/LogInViewCapture.PNG)
+
+  This is the first page the user is greeted with.  It lets them either sign in if they have an account or to create one.
+
+  ### Sign Up Page
 ![Sign Up View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/SignUpViewCapture.PNG)
+  
+  If the user clicks the "Create an Account" button, they are brought to the Sign Up page where they can create an account.  After
+  entering all of the necessary information, they will automatically be logged into the Home page.
 ![Home View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/HomeViewCapture.PNG)
 ![About View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/AboutViewCapture.PNG)
 ![Trip1 View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/CreateViewPt1Capture.PNG)
