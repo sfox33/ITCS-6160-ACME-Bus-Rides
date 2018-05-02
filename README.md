@@ -53,6 +53,13 @@
   To bring all of these pieces together, XAMPP was used to run Apache and MySQL so that the web interface could be tested on a local
   host.
 ## User Interface
+![LogIn View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/LogInViewCapture.PNG)
+![Sign Up View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/SignUpViewCapture.PNG)
+![Home View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/HomeViewCapture.PNG)
+![About View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/AboutViewCapture.PNG)
+![Trip1 View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/CreateViewPt1Capture.PNG)
+![Trip2 View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/CreateViewPt2Capture.PNG)
+![Join View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/JoinViewCapture.PNG)
 ## Business Assumptions and Logic
 ## Databse Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/ITCS%206160%20Assemble%20Bus%20EERD.PNG)
