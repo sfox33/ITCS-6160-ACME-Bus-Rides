@@ -47,7 +47,9 @@
   ### Technology Summary
   
   Front-end Languages: HTML, CSS, JavaScript
+  
   Back-end Language: PHP
+  
   Database Language: MySql
   
   To bring all of these pieces together, XAMPP was used to run Apache and MySQL so that the web interface could be tested on a local
