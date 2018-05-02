@@ -13,6 +13,11 @@
   - [Views](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#views)
 - [Future Work and Goals](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides#future-works-and-goals)
 ## Summary of Project and Navigation
+
+  Team: [Little Bobby Tables](https://xkcd.com/327/)
+  
+  Members: Sean Fox
+  
   This was the semester project for the graduate-level course ITCS 6160 from UNCC.  The project involved making a database in MySQL 
   with at least 8 tables while showcasing several facets of database design including triggers and stored procedures.  Additionally,
   I have to design a web-based user interface that allowed a user to interact with the database in various ways.
@@ -22,10 +27,6 @@
   yet and add Rally Points, or stops along the trip, to their ride.  Though the inspiration is explicitly stated, this project was
   done solely for educational purposes, and those involved with the project are in no way affiliated with, nor do they represent, 
   Rally Bus.
-  
-  Team: [Little Bobby Tables](https://xkcd.com/327/)
-  
-  Members: Sean Fox
   
   Within this repository, you can find all of my code needed to recreate my project, or just review what was done.  This README file
   will go over the project, but should you wish to investigate, there are three folders to be aware of within ITCS-6160-ACME-Bus-Rides. 
