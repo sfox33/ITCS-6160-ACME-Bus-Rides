@@ -62,7 +62,7 @@
 ![Join View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/JoinViewCapture.PNG)
 ## Business Assumptions and Logic
 ## Databse Design
-![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-Assemble-Bus/blob/master/ITCS%206160%20Assemble%20Bus%20EERD.PNG)
+![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/ITCS%206160%20ACME%20Bus%20Rides%20EERD.PNG)
 
   Above is the EER Diagram for my database.  It has 9 tables, and 3 views that are primarily used throughout the project.  See the 
   Views section for information on the prurpose and construction of each view.  Descriptions of the tables are below.
