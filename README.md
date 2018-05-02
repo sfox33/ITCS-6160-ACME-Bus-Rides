@@ -15,8 +15,13 @@
 ## Summary of Project and Navigation
   This was the semester project for the graduate-level course ITCS 6160 from UNCC.  The project involved making a database in MySQL 
   with at least 8 tables while showcasing several facets of database design including triggers and stored procedures.  Additionally,
-  using HTML, CSS, JavaScript, and PHP, I have to design a web-based user interface that allowed a user to interact with the database 
-  in various ways.
+  I have to design a web-based user interface that allowed a user to interact with the database in various ways.
+  
+  This project was inspired by the company [Rally Bus](http://rallybus.net/).  As a result, this project allows a user to create 
+  an account and create a bus trip.  To help mimic the services offered by Rally Bus, users can also join trips that have not occurred 
+  yet and add Rally Points, or stops along the trip, to their ride.  Though the inspiration is explicitly stated, this project was
+  done solely for educational purposes, and those involved with the project are in no way affiliated with, nor do they represent, 
+  Rally Bus.
   
   Team: [Little Bobby Tables](https://xkcd.com/327/)
   
@@ -27,12 +32,25 @@
   The pictures directory simply contains pictures referenced within this document and can be ignored.
   
   The Database Dump directory contains a single .sql dump file.  This dump file contains all of the code needed to recreate the 
-  database - including data, triggers, and stored procedures.
+  database - including data, triggers, and stored procedures.  The directory also contains metadata obtained from the query
+  ```
+  select * from information_schema.tables where table_schema='assemblebus';
+  ```
+  in a .csv file for further analysis.  Note that assemblebus is the name the database used in this project.
   
   The ACME Bus Rides directory contains all of the code for the user interface.  It leads to three sub directories: model, util, and
   view.  The model directory contains files used solely to access the database and validate information.  The util directory simply
-  contains files used to set up information for PHP (such as obtaining the URL).  Finally, the view directory contains all the code 
-  to create the web interface itself.
+  contains files used to set up information for the backend (such as obtaining the URL).  Finally, the view directory contains all 
+  the code to create the web interface itself.
+  
+  ### Technology Summary
+  
+  Front-end Languages: HTML, CSS, JavaScript
+  Back-end Language: PHP
+  Database Language: MySql
+  
+  To bring all of these pieces together, XAMPP was used to run Apache and MySQL so that the web interface could be tested on a local
+  host.
 ## User Interface
 ## Business Assumptions and Logic
 ## Databse Design
@@ -301,3 +319,18 @@ DELIMITER ;
     ON Trip.driverID = BusDriver.driverID;
   ```
 ## Future Work and Goals
+
+  Do to other classes and a lack or time, I was not able to implement everything I wanted.  If I continued with this project, I 
+  would have liked to include user roles so that bus drivers could also log in to the website.  They would be able to see a history 
+  of all rides they have been assigned as well as future ones.
+  
+  Furthermore, for anyone who scheduled a ride, I would have like to create a Detail view.  By clicking the a trip ID, a user could 
+  view all of the information not included in the basic list such as the price and any rally points included in the trip.  
+  Additionally, the ability to delete rally points when creating a trip would be another goal.
+  
+  Finally, in hindsight, there are several changes I would have liked to make to the structure of the code.  Due to a lack of time 
+  and experience with the languages, a large process of writing this code was experimentation.  As such, there are several ways to 
+  improve the structure.  For example, while the structure was loosely inspired by the MVC pattern, the divide between view and model 
+  could be made clearer now that I understand more about PHP.  Furthermore, while this code does perform several validation checks 
+  before making queries, there is nothing in place to handle any errors produced by the database as it was beyond the scope of the 
+  project.  That would be my primary goal with continuing this project.
