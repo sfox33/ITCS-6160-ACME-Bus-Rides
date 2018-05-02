@@ -78,11 +78,46 @@
   
   If the user clicks the "Create an Account" button, they are brought to the Sign Up page where they can create an account.  After
   entering all of the necessary information, they will automatically be logged into the Home page.
+  
+  ### Home Page
 ![Home View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/HomeViewCapture.PNG)
+
+  Here, the user is greeted with a list of trips they have signed up for.  If the account is new or if the user has not signed up 
+  for any trips, the table will be empty.  The sidebar on the left allows the user to access the different sections of the 
+  interface.
+  
+  ### About Page
 ![About View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/AboutViewCapture.PNG)
+  
+  This page further describes the project and its inspiration and purpose.
+  
+  ### Trip Creation Page
 ![Trip1 View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/CreateViewPt1Capture.PNG)
+
+  This top half of the trip creation page allows the user to select an origin and destination for their trip.  Google Maps API assist 
+  by offering an autocomplete for any address entered into these bars.  If used, the API will then place a marker on the Map beneath 
+  the two bars.  Once an origin and destination marker have been placed on the map, a line is drawn along roads to show the user a
+  predicted path.
+  
 ![Trip2 View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/CreateViewPt2Capture.PNG)
+
+  This bottom half of the page lets the user supply the rest of the trip information such as when they want to leave, when they want 
+  to be back, what kind of trip are they reserving (round trip or one-way trip), and the type of bus they would like to reserve.  The 
+  user can optionally select any Rally Points, or stops, they would like to make as well.  If none are selected, the table will be
+  invisible.  Otherwise, a new row will be created for every Rally Point.  The map will also be updated with markers for the Rally 
+  points accordingly.
+  
+  Once everything is selected, the user can select the "Calculate Price" button to get an estimated cost of the trip.  By the business
+  logic, this price could go down if more people join the trip.  The user is welcome to change any of the options and hit the button 
+  again for an updated price.  If they select the "No" button, the page will be refreshed, and all fields will be empty.  If they 
+  select "Yes," they will be brought to the Home page where they can see the trip added to their table.
+  
 ![Join View](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/JoinViewCapture.PNG)
+
+  The final distinct view is the Join page.  This page displays a scrollable table diplaying all future trips that have already been
+  created.  If the user wishes to joing one, they can select the radio button in the Join column for the respective trip and select the 
+  "Join Trip" button on the bottom.  The page will then refresh with all remaining trips as it does not display trips the user is 
+  already signed up for.
 ## Databse Design
 ![Assemble Bus EER Diagram](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/ITCS%206160%20ACME%20Bus%20Rides%20EERD.PNG)
 
