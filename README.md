@@ -42,35 +42,53 @@
   Views section for information on the prurpose and construction of each view.  Descriptions of the tables are below.
   - Trip
   
+  ![TripCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/TripCapture.PNG)
+  
   This table holds the relevant information on each trip including the origin and destination addresses, DateTime objects 
   representing when the trip starts and ends, if the trip is a one-way trip or round trip, etc.
   - Person
+  
+  ![PersonCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/PersonCapture.PNG)
   
   This table holds information about each person represented in the database - including the first and last name, the email, and 
   the automatically generated user ID of the person.
   - Client
   
+  ![ClientCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/ClientCapture.PNG)
+  
   The Client table is a specialization of the Person table representating the customers who are using this service.
   - BusDriver
+  
+  ![BusDriverCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/BusDriverCapture.PNG)
   
   The BusDriver table is a specialization of the Person table representing the people who drive buses for this service.  It 
   also includes the type of bus the person drives.
   - Address
   
+  ![AddressCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/AddressCapture.PNG)
+  
   A table containing the address information of all of the locations used within the database including the origin or the trips, 
   the destinations of the trips, and the Rally Points of the trip.
   - RallyPoint
   
+  ![RallyPointCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/RallyPointCapture.PNG)
+  
   A specialization of the Address table which contains the Ids of the addresses that server as Rally Points
   - Login
+  
+  ![LoginCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/LoginCapture.PNG)
   
   A table that holds the information for logging into a user account.  Contains the Ids from the client table along with the username
   of the client.  For any new accounts, PHP code on the server ensures that the password is hashed along with salt before it is put 
   into the database.
   - UserPerTrip
   
+  ![UserPerTripCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/UserPerTripCapture.PNG)
+  
   A middle table between Client and Trip.  It lists the trip Ids along with the Ids of each client that has signed up for the trip.
   - RallyPointsPerTrip
+  
+  ![RallyPointsPerTripCapture](https://github.com/sfox33/ITCS-6160-ACME-Bus-Rides/blob/master/pictures/RallyPointsPerTripCapture.PNG)
   
   A middle table between RallyPoint and Trip.  Lists the trip Ids along with the Ids of each rally point taken on the trip.
 ## Advanced SQL Statements
