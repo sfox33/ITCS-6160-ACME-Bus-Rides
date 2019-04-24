@@ -385,7 +385,7 @@ DELIMITER ;
   ```
 ## Future Work and Goals
 
-  Do to other classes and a lack or time, I was not able to implement everything I wanted.  If I continued with this project, I 
+  Due to other classes and a lack of time, I was not able to implement everything I wanted.  If I continued with this project, I 
   would have liked to include user roles so that bus drivers could also log in to the website.  They would be able to see a history 
   of all rides they have been assigned as well as future ones.
   
